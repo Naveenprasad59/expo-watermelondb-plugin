@@ -28,14 +28,14 @@
     "react-native"
   ],
   "license": "MIT",
-  "author": "",
-  "homepage": "https://github.com/nickreynke/expo-watermelondb-plugin",
+  "author": "Naveenprasad59",
+  "homepage": "https://github.com/Naveenprasad59/expo-watermelondb-plugin",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nickreynke/expo-watermelondb-plugin.git"
+    "url": "git+https://github.com/Naveenprasad59/expo-watermelondb-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/nickreynke/expo-watermelondb-plugin/issues"
+    "url": "https://github.com/Naveenprasad59/expo-watermelondb-plugin/issues"
   },
   "peerDependencies": {
     "@expo/config-plugins": ">=53.0.0"

@@ -1,0 +1,50 @@
+{
+  "name": "expo-watermelondb-plugin",
+  "version": "1.0.0",
+  "description": "Expo config plugin that auto-configures @nozbe/watermelondb's native JSI module for Android in CNG workflows",
+  "main": "build/withWatermelonDB.js",
+  "types": "build/withWatermelonDB.d.ts",
+  "files": [
+    "build",
+    "app.plugin.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf build",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "expo",
+    "watermelondb",
+    "config-plugin",
+    "jsi",
+    "android",
+    "cng",
+    "prebuild",
+    "eas-build",
+    "react-native"
+  ],
+  "license": "MIT",
+  "author": "",
+  "homepage": "https://github.com/nickreynke/expo-watermelondb-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickreynke/expo-watermelondb-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nickreynke/expo-watermelondb-plugin/issues"
+  },
+  "peerDependencies": {
+    "@expo/config-plugins": ">=53.0.0"
+  },
+  "devDependencies": {
+    "@expo/config-plugins": "^57.0.0",
+    "@expo/config-types": "^57.0.0",
+    "@types/node": "^26.2.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.4.0"
+  }
+}

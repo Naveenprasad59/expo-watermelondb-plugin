@@ -1,0 +1,28 @@
+﻿{
+  "expo": {
+    "name": "WatermelonDB Plugin Example",
+    "slug": "watermelondb-plugin-example",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#ffffff",
+      "resizeMode": "contain",
+      "imageWidth": 200
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.watermelondb"
+    },
+    "android": {
+      "package": "com.example.watermelondb"
+    },
+    "plugins": [
+      "expo-watermelondb-plugin"
+    ],
+    "experiments": {
+      "tsconfigPaths": true
+    }
+  }
+}

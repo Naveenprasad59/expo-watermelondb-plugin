@@ -1,0 +1,26 @@
+﻿{
+  "name": "watermelondb-plugin-example",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "prebuild": "expo prebuild --clean",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@nozbe/watermelondb": "^0.28.0",
+    "expo": "~57.0.13",
+    "expo-status-bar": "~2.0.1",
+    "react": "19.2.0",
+    "react-native": "0.81.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-proposal-decorators": "^7.25.0",
+    "expo-watermelondb-plugin": "file:..",
+    "typescript": "^5.4.0"
+  },
+  "private": true
+}

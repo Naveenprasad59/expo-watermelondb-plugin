@@ -1,4 +1,4 @@
-﻿# WatermelonDB Plugin Example App
+# WatermelonDB Plugin Example App
 
 A minimal Expo app that demonstrates `expo-watermelondb-plugin` working with `@nozbe/watermelondb` and JSI enabled.
 

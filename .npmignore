@@ -1,0 +1,12 @@
+# Source
+src/
+tsconfig.json
+example/
+
+# Dependencies
+node_modules/
+
+# Misc
+*.log
+.git/
+.DS_Store

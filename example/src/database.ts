@@ -1,10 +1,10 @@
-﻿import { Database } from '@nozbe/watermelondb';
+import { Database } from '@nozbe/watermelondb';
 import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite';
 import { Task } from './Task';
 
 /**
- * Database schema — version 1.
- * In a real app you'd evolve this with migrations.
+ * Database schema - version 1.
+ * In a real app you would evolve this with migrations.
  */
 const schema = {
   version: 1,

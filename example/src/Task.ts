@@ -1,4 +1,4 @@
-﻿import { Model } from '@nozbe/watermelondb';
+import { Model } from '@nozbe/watermelondb';
 import { field, table } from '@nozbe/watermelondb/decorators';
 
 /**

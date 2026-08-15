@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import {
   StyleSheet,
   Text,
@@ -17,14 +17,14 @@ import { Task } from './src/Task';
 export default function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskName, setNewTaskName] = useState('');
-  const [jsiStatus, setJsiStatus] = useState<string>('Checking…');
+  const [jsiStatus, setJsiStatus] = useState<string>('Checking...');
 
   useEffect(() => {
     // Verify JSI is working
     const adapter = database.adapter;
-    // @ts-ignore — _taggedAdapterType or similar internal may not be typed
+    // @ts-ignore -- internal property to check JSI status
     const isJsi = (adapter as any)._options?.jsi ?? (adapter as any).jsi;
-    setJsiStatus(isJsi ? 'JSI enabled ✅' : 'JSI disabled ⚠️ (using bridge)');
+    setJsiStatus(isJsi ? 'JSI enabled' : 'JSI disabled (using bridge)');
 
     // Subscribe to tasks
     const subscription = database
@@ -70,14 +70,14 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <StatusBar style="dark" />
       <View style={styles.header}>
-        <Text style={styles.title}>🍉 WatermelonDB + Expo</Text>
+        <Text style={styles.title}>WatermelonDB + Expo</Text>
         <Text style={styles.jsiBadge}>{jsiStatus}</Text>
       </View>
 
       <View style={styles.inputRow}>
         <TextInput
           style={styles.input}
-          placeholder="New task…"
+          placeholder="New task..."
           value={newTaskName}
           onChangeText={setNewTaskName}
           onSubmitEditing={handleAddTask}
@@ -109,12 +109,12 @@ export default function App() {
               style={styles.deleteButton}
               onPress={() => handleDeleteTask(item)}
             >
-              <Text style={styles.deleteButtonText}>✕</Text>
+              <Text style={styles.deleteButtonText}>X</Text>
             </TouchableOpacity>
           </View>
         )}
         ListEmptyComponent={
-          <Text style={styles.emptyText}>No tasks yet. Add one above! 👆</Text>
+          <Text style={styles.emptyText}>No tasks yet. Add one above!</Text>
         }
         contentContainerStyle={styles.list}
       />

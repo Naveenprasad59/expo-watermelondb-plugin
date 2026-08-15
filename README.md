@@ -12,13 +12,20 @@ No committed `android/` / `ios/` folders needed. Survives `expo prebuild` and `E
 
 ## Why this exists
 
-The most-used community plugin ([`@morrowdigital/watermelondb-expo-plugin`](https://github.com/morrowdigital/watermelondb-expo-plugin)) last released `2.4.0-beta.0` (Nov 2025) and only claims tested support through **Expo SDK 54**. Current Expo is **SDK 57** (Aug 2026). Other community forks are stuck at SDK 52–53. This plugin tracks current Expo SDKs and uses modern Gradle APIs (`providers.exec` instead of deprecated `.execute()`).
+The most-used community plugin ([`@morrowdigital/watermelondb-expo-plugin`](https://github.com/morrowdigital/watermelondb-expo-plugin)) last released `2.4.0-beta.0` (Nov 2025) and only claims tested support through **Expo SDK 54**. Current Expo is **SDK 57** (Aug 2026). Other community forks are stuck at SDK 52–53. This plugin tracks current Expo SDKs, is verified across **SDK 54–57**, and uses modern Gradle APIs (`providers.exec` instead of deprecated `.execute()`).
 
 ## Tested against
 
 | Expo SDK | React Native | WatermelonDB | Android | iOS | Status |
 |----------|-------------|-------------|---------|-----|--------|
-| 57       | 0.81        | 0.28.0      | ✅      | ✅  | **Active** |
+| 54       | 0.81        | 0.28.0      | ✅      | ✅  | Supported |
+| 55       | 0.83        | 0.28.0      | ✅      | ✅  | Supported |
+| 56       | 0.85        | 0.28.0      | ✅      | ✅  | Supported |
+| 57       | 0.86        | 0.28.0      | ✅      | ✅  | **Active** |
+
+> Verified by running `expo prebuild` against each SDK's bare template and
+> confirming all four Android files are patched correctly (settings.gradle,
+> app/build.gradle, MainApplication, proguard-rules.pro).
 
 > **Note**: WatermelonDB requires a **custom development client** — it does **not** work with Expo Go. This is a fundamental limitation of any JSI-based native module, shared by all WatermelonDB config plugins.
 
@@ -152,7 +159,7 @@ This plugin adapts logic from [`@morrowdigital/watermelondb-expo-plugin`](https:
 - Adds `pickFirst '**/libc++_shared.so'` to `packagingOptions` (missing from reference plugin)
 - Handles both Kotlin and Java `MainApplication` files
 - Full TypeScript types
-- Tracks current Expo SDK (57) with explicit version testing
+- Verified against Expo SDK 54–57 with explicit prebuild testing
 
 ## License
 
